@@ -22,19 +22,19 @@ class _SplashScreenState extends State<SplashScreen> {
     Future.delayed(Duration(seconds: 3), () {
       print('Hello I am in Future');
       // Navigator.pushNamed(context, Routes.bioScreen);
-      // Navigator.pushReplacementNamed(context, Routes.bioScreen);
+      Navigator.pushReplacementNamed(context, Routes.bioScreen);
       // Navigator.push(
       //   context,
       //   MaterialPageRoute(
       //     builder: (context) => const AboutScreen(),
       //   ),
       // );
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(
-          builder: (context) => const AboutScreen(),
-        ),
-      );
+      // Navigator.pushReplacement(
+      //   context,
+      //   MaterialPageRoute(
+      //     builder: (context) => const AboutScreen(),
+      //   ),
+      // );
     });
   }
 
