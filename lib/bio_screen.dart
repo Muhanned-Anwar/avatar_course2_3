@@ -5,6 +5,8 @@ import 'package:avatar_course2_3/core/resources/manager_strings.dart';
 import 'package:avatar_course2_3/core/routes.dart';
 import 'package:flutter/material.dart';
 
+import 'core/widgets/user_card.dart';
+
 class BioScreen extends StatelessWidget {
   const BioScreen({Key? key}) : super(key: key);
 
@@ -49,10 +51,10 @@ class BioScreen extends StatelessWidget {
         ),
 
         // ToDo: comments only for presentation
-        child: const Column(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            CircleAvatar(
+            const CircleAvatar(
               radius: 64,
               // backgroundImage: AssetImage('assets/images/avatar.jpg'),
               backgroundImage: NetworkImage(
@@ -64,8 +66,8 @@ class BioScreen extends StatelessWidget {
               //   fit: BoxFit.cover,
               // ),
             ),
-            SizedBox(height: 12),
-            Text(
+            const SizedBox(height: 12),
+            const Text(
               ManagerStrings.userName,
               style: TextStyle(
                 fontSize: ManagerFontSizes.s20,
@@ -78,16 +80,23 @@ class BioScreen extends StatelessWidget {
             Text(
               ManagerStrings.flutterCourse,
               style: TextStyle(
-                fontSize: ManagerFontSizes.s24,
-                fontFamily: 'Georama',
-              ),
+                  fontSize: ManagerFontSizes.s18,
+                  fontFamily: 'Georama',
+                  fontStyle: FontStyle.italic,
+                  color: ManagerColors.white),
             ),
-            Divider(
+            const Divider(
               endIndent: 60,
               indent: 60,
               height: 14,
               thickness: 2,
               color: Colors.white70,
+            ),
+            UserCard(),
+            UserCard(
+              username: 'Malak',
+              jobDescription: 'Asp.net Developer',
+              icon: Icons.person_2_outlined,
             ),
           ],
         ),
