@@ -69,9 +69,20 @@ class BioScreen extends StatelessWidget {
               ManagerStrings.userName,
               style: TextStyle(
                 fontSize: ManagerFontSizes.s20,
-                fontWeight: FontWeight.bold,
+                fontStyle: FontStyle.italic,
+                fontFamily: 'Georama',
+                fontWeight: FontWeight.w500,
               ),
-            )
+            ),
+            SizedBox(height: 12),
+            Text(
+              ManagerStrings.flutterCourse,
+              style: TextStyle(
+                fontSize: ManagerFontSizes.s24,
+                fontFamily: 'Georama',
+              ),
+            ),
+            Divider(endIndent: 60, indent: 60, height: 14, thickness: 2,),
           ],
         ),
       ),

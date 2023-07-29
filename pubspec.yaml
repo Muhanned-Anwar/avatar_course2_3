@@ -82,8 +82,6 @@ flutter:
           weight: 500
         - asset: assets/fonts/georama/Georama_Condensed-Italic.ttf
           style: italic
-        - asset: assets/fonts/georama/Georama_Condensed-Bold.ttf
-          weight: 700
 
   #   - family: Trajan Pro
   #     fonts:
