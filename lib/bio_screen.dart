@@ -26,7 +26,15 @@ class BioScreen extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {
-              Navigator.pushReplacementNamed(context, Routes.aboutScreen);
+              Navigator.pushNamed(
+                context,
+                Routes.aboutScreen,
+                arguments: {
+                  'description' : 'Hello In Flutter App',
+                  'name' : 'Mohanned',
+                  'url' : 'https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small/man-with-beard-avatar-character-isolated-icon-free-vector.jpg'
+                }
+              );
             },
             icon: const Icon(
               Icons.info_outline,
