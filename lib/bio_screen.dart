@@ -34,6 +34,9 @@ class BioScreen extends StatelessWidget {
       ),
       extendBodyBehindAppBar: true,
       body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        alignment: Alignment.center,
         decoration: BoxDecoration(
           gradient: LinearGradient(
             begin: AlignmentDirectional.topStart,
@@ -43,6 +46,19 @@ class BioScreen extends StatelessWidget {
               ManagerColors.secondaryColor,
             ],
           ),
+        ),
+
+        // ToDo: comments only for presentation
+        child: CircleAvatar(
+          radius: 64,
+          // backgroundImage: AssetImage('assets/images/avatar.jpg'),
+          backgroundImage: NetworkImage('https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small/man-with-beard-avatar-character-isolated-icon-free-vector.jpg'),
+          // child: Image.network(
+          //   'https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small/man-with-beard-avatar-character-isolated-icon-free-vector.jpg',
+          //   width: 100,
+          //   height: 100,
+          //   fit: BoxFit.cover,
+          // ),
         ),
       ),
     );
