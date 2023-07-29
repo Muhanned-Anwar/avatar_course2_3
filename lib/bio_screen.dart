@@ -49,16 +49,30 @@ class BioScreen extends StatelessWidget {
         ),
 
         // ToDo: comments only for presentation
-        child: CircleAvatar(
-          radius: 64,
-          // backgroundImage: AssetImage('assets/images/avatar.jpg'),
-          backgroundImage: NetworkImage('https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small/man-with-beard-avatar-character-isolated-icon-free-vector.jpg'),
-          // child: Image.network(
-          //   'https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small/man-with-beard-avatar-character-isolated-icon-free-vector.jpg',
-          //   width: 100,
-          //   height: 100,
-          //   fit: BoxFit.cover,
-          // ),
+        child: const Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            CircleAvatar(
+              radius: 64,
+              // backgroundImage: AssetImage('assets/images/avatar.jpg'),
+              backgroundImage: NetworkImage(
+                  'https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small/man-with-beard-avatar-character-isolated-icon-free-vector.jpg'),
+              // child: Image.network(
+              //   'https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small/man-with-beard-avatar-character-isolated-icon-free-vector.jpg',
+              //   width: 100,
+              //   height: 100,
+              //   fit: BoxFit.cover,
+              // ),
+            ),
+            SizedBox(height: 12),
+            Text(
+              ManagerStrings.userName,
+              style: TextStyle(
+                fontSize: ManagerFontSizes.s20,
+                fontWeight: FontWeight.bold,
+              ),
+            )
+          ],
         ),
       ),
     );
